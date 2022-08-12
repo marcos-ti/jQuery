@@ -49,6 +49,9 @@
     </form>
 
     <script>
-        $('#feira').addClass('destaque')
+        $('#feira').addClass('destaque').removeClass('destaque')
+        $('li').addClass('destaque')
+        $('[wm-obrigatorio]').removeClass('destaque')
+        $('li.opcional').removeClass('destaque')
     </script>
 </body>
