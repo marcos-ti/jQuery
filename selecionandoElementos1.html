@@ -53,5 +53,36 @@
         $('li').addClass('destaque')
         $('[wm-obrigatorio]').removeClass('destaque')
         $('li.opcional').removeClass('destaque')
+        $('div p span').addClass('destaque')
+
+        // Exclusivos jQuery
+        $('li:first').css('border', 'solid 3px yellow')
+        // Nos li impares
+        $('li:odd').css('border', 'solid 10px orange')
+        // Seletor com filtro - gt: Greater than
+        $('li:gt(1)').css('border', 'solid 10px white')
+        // Li que não seja o último - Neste caso, os primeiros
+        $('li:not(:last)').css('border', 'none')
+        // Verificar se existe um elemento na busca e modifica o mesmo
+        $('li:contains("r")').css('background-color', 'black')
+        // Formulários
+
+        // Esconder todos os elementos deste formulário
+        $('form *').hide()
+        // Resgatando elementos escondidos:
+
+        // Existe texto! Portanto, mostre!
+        $('form :text').show()
+        // Existe senha! Portanto, mostre!
+        $('form :password').show()
+        // Existe checkbox! Portanto, mostre!
+        $('form :checkbox').show()
+        // Existe radio! Portanto, mostre!
+        $('form :radio').show()
+        // Existe file! Portanto, mostre!
+        $('form :file').show()
+
+
+
     </script>
 </body>
