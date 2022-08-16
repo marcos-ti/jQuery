@@ -87,8 +87,30 @@
     <script>
         const comBorda = { 'border': 'solid 8px orange' }
         const semBorda = { 'border': 'none' }
-
+        // Seleciona o pai, neste caso é o li
         $('a[href="#link3"').parent().css(comBorda).css(semBorda)
+        // Pega o último elemento li e volta para o anterior
+        $('li:last').prev().css(comBorda).css(semBorda)
+        // Seleciona o próximo do pai, neste caso é o li depois do li
+        $('a[href="#link3"').parent().next().css(comBorda).css(semBorda)
+        // Pegar todos elementos pai
+        $('a[href="#link1"]').parents().css(comBorda).css(semBorda)
+        // Até o pai, mas ele não é incluído
+        $('a[href="#link1"]').parentsUntil($('body')).css(comBorda).css(semBorda)
+        // Filhos da tag
+        $('main').children().css(comBorda).css(semBorda)
+        // Encontrar a tag
+        $('body').find('a').css(comBorda).css(semBorda)
+
+        const elementoDOM = document.getElementsByClassName('menu')
+
+        $(elementoDOM).css(comBorda).css(semBorda)
+
+        // Percorrendo: each(indice, elemento)
+        $('main').children().each((i, e) => $(e).css(comBorda).css(semBorda))
+        $('li').each((i, e) => {
+            $(e).css(comBorda).css(semBorda)
+        })
 
     </script>
 </body>
