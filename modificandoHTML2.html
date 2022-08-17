@@ -17,6 +17,37 @@
     <p class='numero'>5</p>
 
     <script>
-        // ...
+        // * : Melhor para usar, primeiro seletor e depois o elemento
+        // append *
+        $('#div1').append(', 2')
+        $('#div1').prepend('0, ')
+        // appendTo
+        $('<span>, 3</span>').appendTo('#div1')
+        // prependTo
+        $('<span>-1, </span>').prependTo('#div1')
+        // before *
+        $('#div2').before('<p>Antes 2</p>')
+        // after *
+        $('#div2').after('<p>Depois 2</p>')
+        // insertBefore
+        $('<p>Antes 3</p>').insertBefore('#div3')
+        // insertAfter
+        $('<p>Depois 3</p>').insertAfter('#div3')
+        // wrap *: Envolver, Empacotar
+        $('p.numero').wrap('<div>')
+        // wrapAll: Envolver, Empacotar tudo
+        $('p.numero').wrapAll('<div id="div4">')
+        // empty: Limpar o conteúdo
+        $("#div4").empty()
+        // prev: Volta ao anterior
+        $('#div3, #div4').prev().remove()
+        // replaceAll
+        $('<div>Substituto</div>').replaceAll('body > p')
+        // replaceWith *
+        $('body > p').replaceWith('<div>Substituto</div>')
+        // replaceWith *
+        $('body > p').replaceWith(function () {
+            return $('<div>').html($(this).html()).append('!!!') // Parecido com wrap
+        })
     </script>
 </body>
